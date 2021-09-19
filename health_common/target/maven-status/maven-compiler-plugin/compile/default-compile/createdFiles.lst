@@ -1,5 +1,7 @@
-com\chngalaxy\entity\PageResult.class
 com\chngalaxy\exception\MyException.class
+com\chngalaxy\utils\QiNiuUtils.class
 com\chngalaxy\entity\Result.class
 com\chngalaxy\entity\QueryPageBean.class
 com\chngalaxy\constant\MessageConstant.class
+com\chngalaxy\entity\PageResult.class
+com\chngalaxy\utils\POIUtils.class

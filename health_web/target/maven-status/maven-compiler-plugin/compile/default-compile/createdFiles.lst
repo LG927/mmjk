@@ -1,3 +1,4 @@
 com\chngalaxy\controller\CheckGroupController.class
+com\chngalaxy\controller\SetmealController.class
 com\chngalaxy\controller\MyExceptionAdvice.class
 com\chngalaxy\controller\CheckItemController.class

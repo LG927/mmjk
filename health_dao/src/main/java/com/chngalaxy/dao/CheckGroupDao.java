@@ -33,7 +33,7 @@ public interface CheckGroupDao {
     void addCheckGroupCheckItem(@Param("checkGroupId") Integer checkGroupId, @Param("checkitemId") Integer checkitemId);
 
     /**
-     *
+     *通过id查询检查组
      * @param id
      * @return
      */
@@ -57,6 +57,14 @@ public interface CheckGroupDao {
      * @param checkGroupId
      */
     void deleteCheckGroupCheckItem(Integer checkGroupId);
+
+    /**
+     * 查询所有的检查组
+     * @return
+     */
+
+    List<CheckGroup> findAll();
+
 
 
 }

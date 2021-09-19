@@ -106,4 +106,17 @@ public class CheckGroupServiceImpl implements CheckGroupService {
         }
         //6. 事务控制
     }
+
+
+    /**
+     * 查询所有的检查组
+     * @return
+     */
+    @Override
+    public List<CheckGroup> findAll() {
+        return checkGroupDao.findAll();
+    }
+
+
+
 }

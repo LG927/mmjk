@@ -52,5 +52,8 @@
         delete from t_checkgroup_checkitem where checkgroup_id=#{checkGroupId}
     </delete>
 
+    <select id="findAll" resultType="checkgroup">
+        select * from t_checkgroup
+    </select>
 
 </mapper>

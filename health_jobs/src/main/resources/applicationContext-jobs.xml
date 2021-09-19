@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 注册自定义的任务类 -->
+    <context:component-scan base-package="com.chngalaxy.jobs"/>
+
+    <!-- 任务描述（策略） -->
+    <bean id="jobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <!--   targetObject 任务触发时，调用spring容器中的哪个bean对象, ref=bean对象的id或name     -->
+        <property name="targetObject" ref="clearImgJob"/>
+        <!--   targetMethod 任务触发时，调用spring容器中的哪个bean对象, bean的方法    -->
+        <property name="targetMethod" value="clean7NiuImgJob"/>
+        <!--  并发执行，多个线程来执行同一个方法。关闭并发，同步执行。      -->
+        <property name="concurrent" value="false"/>
+    </bean>
+    <!--  触发器：定义触发时机  -->
+    <bean id="trigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <!--  7子表达式：时间的表达式: 每间隔2秒执行一次   -->
+        <property name="cronExpression" value="0/30 * * * * ?"/>
+        <!-- 绑定的任务描述，触发器触发时调用会jobDetail targetObject-> targetMethod 任务方法就执行  -->
+        <property name="jobDetail" ref="jobDetail"/>
+    </bean>
+
+    <!--  调度容器 中心  -->
+    <bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <!--  绑定触发时机      -->
+        <property name="triggers">
+            <list>
+                <ref bean="trigger"/>
+            </list>
+        </property>
+    </bean>
+
+    <!--  导入dao配置文件  -->
+    <import resource="classpath:applicationContext-dao.xml"/>
+</beans>

@@ -44,4 +44,13 @@ public interface CheckGroupService {
      */
     void update(CheckGroup checkGroup, List<Integer> checkitemIds);
 
+
+    /**
+     * 查询所有的检查组
+     * @return
+     */
+
+    List<CheckGroup> findAll();
+
+
 }
