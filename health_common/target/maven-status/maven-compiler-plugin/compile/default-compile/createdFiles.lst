@@ -1,0 +1,5 @@
+com\chngalaxy\entity\PageResult.class
+com\chngalaxy\exception\MyException.class
+com\chngalaxy\entity\Result.class
+com\chngalaxy\entity\QueryPageBean.class
+com\chngalaxy\constant\MessageConstant.class

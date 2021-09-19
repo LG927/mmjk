@@ -1,0 +1,4 @@
+com\chngalaxy\service\impl\CheckGroupServiceImpl.class
+com\chngalaxy\service\impl\CheckItemServiceImpl.class
+com\chngalaxy\service\CheckGroupService.class
+com\chngalaxy\service\CheckItemService.class

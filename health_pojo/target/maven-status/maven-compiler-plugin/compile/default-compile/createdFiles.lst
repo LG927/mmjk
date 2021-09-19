@@ -1,0 +1,10 @@
+com\chngalaxy\pojo\Order.class
+com\chngalaxy\pojo\CheckItem.class
+com\chngalaxy\pojo\OrderSetting.class
+com\chngalaxy\pojo\Permission.class
+com\chngalaxy\pojo\User.class
+com\chngalaxy\pojo\Member.class
+com\chngalaxy\pojo\Menu.class
+com\chngalaxy\pojo\Role.class
+com\chngalaxy\pojo\CheckGroup.class
+com\chngalaxy\pojo\Setmeal.class

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chngalaxy.dao.CheckItemDao">
+
+    <!--查询所有检查项-->
+    <select id="findAll" resultType="checkitem">
+        select * from t_checkitem
+    </select>
+
+    <!--新增检查项-->
+    <insert id="add" >
+        insert into t_checkitem values(null,#{code},#{name},#{sex},#{age},#{price},#{type},#{remark},#{attention})
+    </insert>
+
+    <!--检查项分页查询-->
+    <select id="findByCodition" resultType="checkitem" parameterType="string">
+        select id,code,name,sex,age,price,type,remark,attention from t_checkitem
+        <where>
+            <if test="value != null and value.length > 0">
+                code like #{queryString} or name like #{queryString}
+            </if>
+        </where>
+    </select>
+
+    <!--统计这个检查项id被检查组使用的次数-->
+    <select id="findCountByCheckItemId" resultType="int" parameterType="int">
+        select count(0) from t_checkgroup_checkitem where checkitem_id = #{id}
+    </select>
+
+    <!--删除检查项-->
+    <delete id="deleteById" parameterType="int">
+        delete from t_checkitem where id =#{id}
+    </delete>
+
+    <!--通过id查询检查项-->
+    <select id="findById" parameterType="int" resultType="checkitem">
+        select * from t_checkitem where id =#{id}
+    </select>
+
+    <!--更新检查项-->
+    <update id="update" parameterType="CheckItem">
+        update t_checkitem set
+            code=#{code},
+            name=#{name},
+            sex=#{sex},
+            age=#{age},
+            price=#{price},
+            type=#{type},
+            remark=#{remark},
+            attention=#{attention}
+        where id =#{id}
+    </update>
+</mapper>
