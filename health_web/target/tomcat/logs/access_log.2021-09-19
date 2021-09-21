@@ -82,3 +82,11 @@
 0:0:0:0:0:0:0:1 - - [19/Sep/2021:20:51:17 +0800] "GET /checkgroup/findAll.do HTTP/1.1" 200 1641 http-bio-82-exec-4 978
 0:0:0:0:0:0:0:1 - - [19/Sep/2021:20:51:25 +0800] "POST /setmeal/upload.do HTTP/1.1" 200 154 http-bio-82-exec-8 1600
 0:0:0:0:0:0:0:1 - - [19/Sep/2021:20:51:41 +0800] "POST /setmeal/add.do?checkgroupIds=5,6 HTTP/1.1" 200 56 http-bio-82-exec-8 111
+0:0:0:0:0:0:0:1 - - [19/Sep/2021:23:34:49 +0800] "GET /pages/setmeal.html HTTP/1.1" 200 26877 http-bio-82-exec-2 10
+0:0:0:0:0:0:0:1 - - [19/Sep/2021:23:34:50 +0800] "POST /setmeal/findPage.do HTTP/1.1" 404 949 http-bio-82-exec-2 6
+0:0:0:0:0:0:0:1 - - [19/Sep/2021:23:34:51 +0800] "GET /pages/checkgroup.html HTTP/1.1" 304 - http-bio-82-exec-2 3
+0:0:0:0:0:0:0:1 - - [19/Sep/2021:23:34:52 +0800] "POST /checkgroup/findPage.do HTTP/1.1" 200 1409 http-bio-82-exec-2 312
+0:0:0:0:0:0:0:1 - - [19/Sep/2021:23:34:52 +0800] "POST /setmeal/findPage.do HTTP/1.1" 404 949 http-bio-82-exec-2 4
+0:0:0:0:0:0:0:1 - - [19/Sep/2021:23:34:56 +0800] "POST /setmeal/findPage.do HTTP/1.1" 404 949 http-bio-82-exec-2 4
+0:0:0:0:0:0:0:1 - - [19/Sep/2021:23:34:59 +0800] "GET /pages/ordersetting.html HTTP/1.1" 304 - http-bio-82-exec-2 1
+0:0:0:0:0:0:0:1 - - [19/Sep/2021:23:35:00 +0800] "GET /template/ordersetting_template.xlsx HTTP/1.1" 200 8998 http-bio-82-exec-2 2

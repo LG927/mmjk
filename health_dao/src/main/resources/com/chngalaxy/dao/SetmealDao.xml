@@ -18,4 +18,9 @@
         insert into t_setmeal_checkgroup (setmeal_id,checkgroup_id)
         values (#{setmealId},#{checkgroupId});
     </insert>
+
+    <!--查询所有的图片-->
+    <select id="selectImgs" resultType="String">
+        select img from t_setmeal;
+    </select>
 </mapper>
