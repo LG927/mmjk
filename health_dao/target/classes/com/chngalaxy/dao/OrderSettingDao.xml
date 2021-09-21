@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chngalaxy.dao.OrderSettingDao">
+    <!--  jdbcType=DATE 指定mybatis操作数据库时使用的数据类型DATE, 因为人家类型就是DATE,
+    如果不指定，mybatis默认使用timestamp(带时分秒), 如果时分秒不为0，则会导致查询不到记录  -->
+    <!--通过日期查询预约设置表-->
+    <select id="findByOrderDate" parameterType="date" resultType="OrderSetting">
+        select * from t_ordersetting where orderDate =#{orderDate,jdbcType=DATE};
+    </select>
+
+    <!--更新最大预约数 -->
+    <insert id="add" parameterType="ordersetting">
+        insert into t_ordersetting (orderDate,number,reservations)
+        values (#{orderDate,jdbcType=DATE},#{number},#{reservations});
+    </insert>
+
+    <!--添加预约设置-->
+    <update id="updateNumber" parameterType="ordersetting">
+        update t_ordersetting
+        set number=#{number}
+        where orderDate=#{orderDate, jdbcType=DATE}
+    </update>
+</mapper>

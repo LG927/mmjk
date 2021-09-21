@@ -1,0 +1,11 @@
+0:0:0:0:0:0:0:1 - - [21/Sep/2021:18:12:41 +0800] "GET /pages/main.html HTTP/1.1" 304 - http-bio-82-exec-1 138
+0:0:0:0:0:0:0:1 - - [21/Sep/2021:18:12:41 +0800] "GET /pages/ordersetting.html HTTP/1.1" 304 - http-bio-82-exec-3 36
+0:0:0:0:0:0:0:1 - - [21/Sep/2021:18:12:46 +0800] "GET /template/ordersetting_template.xlsx HTTP/1.1" 304 - http-bio-82-exec-4 13
+0:0:0:0:0:0:0:1 - - [21/Sep/2021:18:14:01 +0800] "POST /ordersetting/upload.do HTTP/1.1" 200 74 http-bio-82-exec-6 2634
+0:0:0:0:0:0:0:1 - - [21/Sep/2021:18:14:10 +0800] "GET /pages/setmeal.html HTTP/1.1" 304 - http-bio-82-exec-8 22
+0:0:0:0:0:0:0:1 - - [21/Sep/2021:18:14:11 +0800] "POST /setmeal/findPage.do HTTP/1.1" 404 949 http-bio-82-exec-9 12
+0:0:0:0:0:0:0:1 - - [21/Sep/2021:18:14:11 +0800] "GET /pages/ordersettinglist.html HTTP/1.1" 404 1005 http-bio-82-exec-10 2
+0:0:0:0:0:0:0:1 - - [21/Sep/2021:18:14:15 +0800] "POST /setmeal/findPage.do HTTP/1.1" 404 949 http-bio-82-exec-10 5
+0:0:0:0:0:0:0:1 - - [21/Sep/2021:18:14:44 +0800] "GET /pages/ordersettinglist.html HTTP/1.1" 404 1005 http-bio-82-exec-4 2
+0:0:0:0:0:0:0:1 - - [21/Sep/2021:18:14:45 +0800] "POST /setmeal/findPage.do HTTP/1.1" 404 949 http-bio-82-exec-4 4
+0:0:0:0:0:0:0:1 - - [21/Sep/2021:18:14:52 +0800] "POST /ordersetting/upload.do HTTP/1.1" 200 74 http-bio-82-exec-6 247
